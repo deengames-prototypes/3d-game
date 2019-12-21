@@ -28,6 +28,5 @@ func _process(delta):
 
 func _physics_process(delta):
 	var gravity_to_center = self.translation.normalized() * GRAVITY
-	print("G="+str(gravity_to_center))
 	self.move_and_slide(_velocity + gravity_to_center)
-	
+	$Mesh.rotation = gravity_to_center * 0.01
