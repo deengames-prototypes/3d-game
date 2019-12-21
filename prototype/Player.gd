@@ -1,7 +1,7 @@
 extends KinematicBody
 
 # Simple, linear grvity
-const GRAVITY = -98
+const GRAVITY = -9
 const MOVE_SPEED = 10
 
 var _velocity = Vector3(0, 0, 0)
@@ -29,4 +29,3 @@ func _process(delta):
 func _physics_process(delta):
 	var gravity_to_center = self.translation.normalized() * GRAVITY
 	self.move_and_slide(_velocity + gravity_to_center)
-	$Mesh.rotation = gravity_to_center * 0.01
