@@ -1,3 +1,27 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="SphereMesh" id=1]
+radius = 20.0
+height = 40.0
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.631373, 0.631373, 0.631373, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Planetoid" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="KinematicBody" type="KinematicBody" parent="Planetoid"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0 )
+
+[node name="Mesh" type="MeshInstance" parent="Planetoid/KinematicBody"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="Planetoid/KinematicBody"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 25, 0 )
+current = true

@@ -15,7 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Planetoid Ship Defense"
+config/name="PSD Prototype"
+run/main_scene="res://Prototype.tscn"
 config/icon="res://icon.png"
 
 [rendering]
