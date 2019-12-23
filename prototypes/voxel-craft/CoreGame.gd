@@ -1,4 +1,4 @@
 extends Spatial
 
 func _ready():
-	$Camera.target_object($MeshInstance)
+	$MeshInstance/Spatial.set_target($MeshInstance)
