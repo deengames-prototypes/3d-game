@@ -9,3 +9,5 @@ func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx
 			round(click_position.x), round(click_position.y), round(click_position.z))
 		cube.translation = click_position
 		self.get_parent().add_child(cube)
+		
+		Global.color
