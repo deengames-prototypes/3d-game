@@ -19,21 +19,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="White" parent="CanvasLayer" instance=ExtResource( 4 )]
+color = Color( 0.972549, 0.890196, 0.768627, 1 )
 
 [node name="Yellow" parent="CanvasLayer" instance=ExtResource( 4 )]
 margin_left = 50.0
 margin_right = 90.0
-color = Color( 1, 1, 0, 1 )
+color = Color( 0.8, 0.203922, 0.584314, 1 )
 
 [node name="Brown" parent="CanvasLayer" instance=ExtResource( 4 )]
 margin_left = 100.0
 margin_right = 140.0
-color = Color( 0.501961, 0.25098, 0, 1 )
+color = Color( 0.419608, 0.121569, 0.694118, 1 )
 
 [node name="Blue" parent="CanvasLayer" instance=ExtResource( 4 )]
 margin_left = 150.0
 margin_right = 190.0
-color = Color( 0, 0, 1, 1 )
+color = Color( 0.0431373, 0.0235294, 0.188235, 1 )
 
 [node name="Red" parent="CanvasLayer" instance=ExtResource( 4 )]
 margin_left = 200.0

@@ -8,9 +8,8 @@ func _ready():
 	# Update camera to look at the main/starter block
 	$MeshInstance/Spatial.set_target($MeshInstance)
 	
-	#for child in $CanvasLayer.get_children():
-	#	if child is PickableColor:
-	#		child.connect("color_selected", self, "_on_color_selected")
-
+	var first_color = $CanvasLayer.get_children()[0]
+	$MeshInstance.change_color(first_color.color)
+	
 #func _on_color_selected(color):
 #	_block_color = color
