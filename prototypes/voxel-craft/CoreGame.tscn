@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://CoreGame.gd" type="Script" id=1]
 [ext_resource path="res://ExpandableCube.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Spatial.gd" type="Script" id=3]
 [ext_resource path="res://PickableColor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Roboto-Bold.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 5 )
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 1 )
@@ -18,25 +23,51 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Erase" parent="CanvasLayer" instance=ExtResource( 4 )]
+editor/display_folded = true
+
+[node name="1" parent="CanvasLayer/Erase" instance=ExtResource( 4 )]
+margin_left = 3.0
+margin_right = 53.0
+margin_bottom = 4.0
+rect_rotation = 45.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="2" parent="CanvasLayer/Erase" instance=ExtResource( 4 )]
+margin_left = 1.0
+margin_top = 36.0
+margin_right = 51.0
+rect_rotation = -45.0
+color = Color( 1, 0, 0, 1 )
+
 [node name="White" parent="CanvasLayer" instance=ExtResource( 4 )]
+margin_left = 50.0
+margin_right = 90.0
 color = Color( 0.972549, 0.890196, 0.768627, 1 )
 
 [node name="Yellow" parent="CanvasLayer" instance=ExtResource( 4 )]
-margin_left = 50.0
-margin_right = 90.0
+margin_left = 100.0
+margin_right = 140.0
 color = Color( 0.8, 0.203922, 0.584314, 1 )
 
 [node name="Brown" parent="CanvasLayer" instance=ExtResource( 4 )]
-margin_left = 100.0
-margin_right = 140.0
+margin_left = 150.0
+margin_right = 190.0
 color = Color( 0.419608, 0.121569, 0.694118, 1 )
 
 [node name="Blue" parent="CanvasLayer" instance=ExtResource( 4 )]
-margin_left = 150.0
-margin_right = 190.0
+margin_left = 200.0
+margin_right = 240.0
 color = Color( 0.0431373, 0.0235294, 0.188235, 1 )
 
 [node name="Red" parent="CanvasLayer" instance=ExtResource( 4 )]
-margin_left = 200.0
-margin_right = 240.0
+margin_left = 250.0
+margin_right = 290.0
 color = Color( 1, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_top = 568.0
+margin_right = 40.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 1 )
+text = "Value: 0 (Materials: 100, labour: 200)"
