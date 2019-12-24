@@ -32,6 +32,7 @@ func _unhandled_input(event):
 	# https://godotengine.org/qa/41212/how-to-rotate-the-camera-around-an-object-3d
 	# Mesh => Spatial => Camera, rotate spatial, DONE
 	if moved:
+		Globals.labour_total += 0.1
 		self.rotation.z = (y_angle * PI / 180)
 		self.rotation.y = (x_angle * PI / 180)
 		$Camera.look_at(target.translation - self.translation, UP_VECTOR)

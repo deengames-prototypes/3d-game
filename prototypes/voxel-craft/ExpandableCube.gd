@@ -8,8 +8,10 @@ func _init():
 	Globals.num_cubes += 1
 
 func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx):
+	Globals.labour_total += 1
+	
 	if event is InputEventMouseButton and event.pressed:
-		
+		Globals.labour_total += 4 # 5 total
 		if Globals.is_erase and Globals.num_cubes > 1:
 			Globals.materials_total -= Globals.material_values[self.color]
 			Globals.num_cubes -= 1
