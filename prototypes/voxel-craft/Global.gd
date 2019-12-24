@@ -1,3 +1,3 @@
 extends Node
 
-var color:Color
+var color:Color = Color.white

@@ -23,10 +23,10 @@ func _unhandled_input(event):
 		moved = true
 		
 	if Input.is_action_pressed("ui_up"):
-		y_angle += ANGLE_INCREMENT
+		y_angle -= ANGLE_INCREMENT
 		moved = true
 	elif Input.is_action_pressed("ui_down"):
-		y_angle -= ANGLE_INCREMENT
+		y_angle += ANGLE_INCREMENT
 		moved = true
 	
 	# https://godotengine.org/qa/41212/how-to-rotate-the-camera-around-an-object-3d
